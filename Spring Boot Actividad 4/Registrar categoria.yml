@@ -1,0 +1,25 @@
+info:
+  name: Registrar categoria
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8088/api/categorias
+  body:
+    type: json
+    data: |-
+      {
+          "nombre": "Electrónica",
+          "descripcion": "Productos electrónicos y accesorios"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzcHJpbmdib290LWFjdGl2aWRhZDQiLCJzdWIiOiJrYXJsYUBnbWFpbC5jb20iLCJleHAiOjE3OTQ2MTY0MTEsImlhdCI6MTc5NDUzMDAxMX0.n7-axs73aGaoOTjkjn3Pw7KHjHUhIwqwxB_X5Yldz1s
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
